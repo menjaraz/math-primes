@@ -24,7 +24,7 @@ size_t nthPrimeUpperBound(size_t n) @nogc @safe pure nothrow {
     import std.math : log;
 
     if (n > 6)
-        return cast(size_t)(n * log(n) + n * log(log(n)));
+        return cast(size_t)(n * log(cast(double)n) + n * log(log(cast(double)n)));
     else
         return 11;
 }
